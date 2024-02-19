@@ -1,31 +1,23 @@
 # RSSchool NodeJS websocket task template
-> Static http server and base task packages. 
+
+> Static http server and base task packages.
 > By default WebSocket client tries to connect to the 3000 port.
 
 ## Installation
-1. Clone/download repo
+
+1. Clone the repository
+   git clone git@github.com:LizavetaNik/websockets-ui.git -b develop
+   cd websockets-ui
 2. `npm install`
+3. You can add .env and write the variable PORT=4000
+   but the default is PORT=8181
+4. `npm start`
+   Start static http server on the 3000 port!
 
 ## Usage
+
 **Development**
-
-`npm run start:dev`
-
-* App served @ `http://localhost:8181` with nodemon
+`npm start`
 
 **Production**
-
-`npm run start`
-
-* App served @ `http://localhost:8181` without nodemon
-
----
-
-**All commands**
-
-Command | Description
---- | ---
-`npm run start:dev` | App served @ `http://localhost:8181` with nodemon
-`npm run start` | App served @ `http://localhost:8181` without nodemon
-
-**Note**: replace `npm` with `yarn` in `package.json` if you use yarn.
+`npm run start:prod`
