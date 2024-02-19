@@ -1,8 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as http from 'http';
-import { WebSocketServer } from 'ws';
-import { connectionHandler } from '../websoket/index';
 
 export const httpServer = http.createServer(function (req, res) {
   const __dirname = path.resolve(path.dirname(''));
@@ -18,6 +16,3 @@ export const httpServer = http.createServer(function (req, res) {
     res.end(data);
   });
 });
-
-const wsServer = new WebSocketServer({ port: 3000, clientTracking: true });
-wsServer.on('connection', connectionHandler);
